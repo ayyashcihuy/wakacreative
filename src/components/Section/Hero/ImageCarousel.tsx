@@ -49,6 +49,7 @@ export default function InfiniteCarousel({
                 src={item.src}
                 alt={item.alt}
                 fill
+                unoptimized
                 className="object-cover"
                 sizes="(max-width: 640px) 220px, (max-width: 1024px) 300px, 340px"
                 draggable={false}
