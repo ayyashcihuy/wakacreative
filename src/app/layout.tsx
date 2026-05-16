@@ -123,12 +123,12 @@ const jsonLd = {
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: -6.2383,
-        longitude: 106.9756,
+        latitude: -6.31561493178479,
+        longitude: 106.94690214694378,
       },
       areaServed: [
         { "@type": "City", name: "Bekasi" },
-        { "@type": "City", name: "Jakarta" },
+        { "@type": "City", name: "Jakarta" }
       ],
       image: `${BASE_URL}/og-image.jpg`,
       priceRange: "$$",
