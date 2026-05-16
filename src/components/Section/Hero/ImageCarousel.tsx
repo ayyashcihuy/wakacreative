@@ -50,6 +50,7 @@ export default function InfiniteCarousel({
                 alt={item.alt}
                 fill
                 unoptimized
+                loading={index < 6 ? "eager" : "lazy"}
                 className="object-cover"
                 sizes="(max-width: 640px) 220px, (max-width: 1024px) 300px, 340px"
                 draggable={false}

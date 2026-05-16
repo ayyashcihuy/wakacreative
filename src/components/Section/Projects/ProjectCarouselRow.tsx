@@ -31,6 +31,7 @@ export default function ProjectCarouselRow({
               alt={`Project ${(index % images.length) + 1}`}
               fill
               unoptimized
+              loading="lazy"
               className="object-cover"
               sizes="210px"
               draggable={false}
