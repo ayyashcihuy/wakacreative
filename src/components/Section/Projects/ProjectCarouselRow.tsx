@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { StaticImageData } from "next/image";
 
 interface ProjectCarouselRowProps {
-  images: StaticImageData[];
+  images: string[];
   direction: "left" | "right";
   durationSec?: number;
 }
@@ -22,15 +21,16 @@ export default function ProjectCarouselRow({
         className={`flex gap-3 ${trackClass}`}
         style={{ width: "max-content", animationDuration: `${durationSec}s` }}
       >
-        {doubled.map((img, index) => (
+        {doubled.map((src, index) => (
           <div
             key={index}
             className="relative flex-shrink-0 w-[180px] h-[120px] sm:w-[210px] sm:h-[140px] rounded-lg overflow-hidden"
           >
             <Image
-              src={img}
+              src={src}
               alt={`Project ${(index % images.length) + 1}`}
               fill
+              unoptimized
               className="object-cover"
               sizes="210px"
               draggable={false}

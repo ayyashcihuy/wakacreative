@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { StaticImageData } from "next/image";
 import { PROJECT_IMAGES } from "@/constants/projectImages";
 import ProjectCarouselRow from "./ProjectCarouselRow";
 
-function buildRows(images: StaticImageData[], rowCount: number): StaticImageData[][] {
+function buildRows(images: string[], rowCount: number): string[][] {
   const perRow = Math.max(Math.ceil(images.length / rowCount), 15);
   const total = images.length;
   return Array.from({ length: rowCount }, (_, rowIdx) => {
