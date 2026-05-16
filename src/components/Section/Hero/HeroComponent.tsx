@@ -64,9 +64,10 @@ export default function HeroComponent() {
 
           {/* WAKA display text */}
           <div className="text-right">
-            <h2 className="text-5xl sm:text-7xl lg:text-[9rem] font-black uppercase leading-none tracking-tight text-foreground">
-              WAKA
-            </h2>
+            <h1 className="text-5xl sm:text-7xl lg:text-[9rem] font-black uppercase leading-none tracking-tight text-foreground">
+              <span className="sr-only">Waka Creative — Jasa Video Production &amp; Foto Profesional di Bekasi</span>
+              <span aria-hidden="true">WAKA</span>
+            </h1>
           </div>
         </div>
       </motion.div>
