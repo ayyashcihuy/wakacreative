@@ -77,11 +77,63 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+      { url: "/web-app-manifest-192x192.png", type: "image/png", sizes: "192x192" },
+      { url: "/web-app-manifest-512x512.png", type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "Waka Creative",
+      url: BASE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/web-app-manifest-512x512.png`,
+      },
+      sameAs: [
+        "https://www.instagram.com/waka.creative",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+62-813-8594-5720",
+        contactType: "customer service",
+        availableLanguage: "Indonesian",
+      },
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${BASE_URL}/#localbusiness`,
+      name: "Waka Creative",
+      description:
+        "Spesialis video production dan foto profesional di Bekasi. Melayani video company profile, video iklan (TVC), dokumentasi, color grading, dan motion graphic.",
+      url: BASE_URL,
+      telephone: "+62-813-8594-5720",
+      email: "info@wakacreative.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Bekasi",
+        addressRegion: "Jawa Barat",
+        addressCountry: "ID",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -6.2383,
+        longitude: 106.9756,
+      },
+      areaServed: [
+        { "@type": "City", name: "Bekasi" },
+        { "@type": "City", name: "Jakarta" },
+      ],
+      image: `${BASE_URL}/og-image.jpg`,
+      priceRange: "$$",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -94,6 +146,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
