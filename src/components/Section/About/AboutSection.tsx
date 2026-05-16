@@ -55,7 +55,7 @@ export default function AboutSection({ title, description }: AboutSectionProps) 
         {/* PNG phone frame overlay */}
         <Image
           src={mobileMock}
-          alt="Phone mockup"
+          alt="Waka Creative — Showreel video production ditampilkan di perangkat mobile"
           width={PHONE_W}
           height={PHONE_H}
           style={{
