@@ -1,5 +1,3 @@
-"use client";
-
 import BackgroundGradient from "@/components/Background/GradientBackground";
 import NavigationBar from "@/components/Navigation/NavigationBar";
 import FloatingActions from "@/components/Navigation/FloatingActions";

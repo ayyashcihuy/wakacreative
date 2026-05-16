@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Waka Creative
 
-## Getting Started
+Website resmi **Waka Creative** — spesialis video production & foto profesional di Bekasi, Indonesia.
 
-First, run the development server:
+---
+
+## Menjalankan Project
 
 ```bash
+# Install dependencies
+npm install
+
+# Development
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build untuk production
+npm run build
+
+# Jalankan production build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+Buat file `.env.local` di root project dengan variabel berikut:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+# Google Analytics 4 (isi setelah mendapatkan Measurement ID dari Google)
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Struktur Konten
 
-## Deploy on Vercel
+Semua konten website yang perlu diupdate ada di folder `src/constants/`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| File | Isi |
+|------|-----|
+| `src/constants/aboutSection.ts` | Teks dan gambar di section About |
+| `src/constants/services.ts` | Daftar layanan (Video Production, Foto, Editing) |
+| `src/constants/carouselImages.ts` | Gambar-gambar di carousel hero |
+| `src/constants/projectImages.ts` | Gambar di section Projects |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Management Website
+
+### Menambah Gambar Portfolio Baru
+
+1. Letakkan file gambar di `src/assets/image/hero/`
+2. Gunakan nama file yang deskriptif, contoh: `waka-creative-video-company-profile-bank-xyz.jpg`
+3. Import dan tambahkan ke array `CAROUSEL_ITEMS` di `src/constants/carouselImages.ts`
+4. Pastikan mengisi `title` dan `category` untuk setiap gambar
+
+### Mengubah Informasi Kontak
+
+Edit file `src/components/Section/Contact/ContactSection.tsx` — ubah nilai di array `CONTACT_ITEMS`.
+
+### Mengubah Layanan
+
+Edit file `src/constants/services.ts` — tambah, hapus, atau ubah objek di array `SERVICES`.
+
+### Mengubah Teks About
+
+Edit file `src/constants/aboutSection.ts` — ubah `title` dan `description`.
+
+---
+
+## Hal Penting Sebelum Deploy
+
+- [ ] Pastikan file `public/og-image.jpg` sudah ada (1200x630px) — untuk preview saat link dibagikan
+- [ ] Pastikan favicon set sudah ada di `public/` (`favicon.ico`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png`)
+- [ ] Pastikan `BASE_URL` di `src/app/layout.tsx` sesuai dengan domain yang aktif
+- [ ] Isi `NEXT_PUBLIC_GA_ID` di environment variables platform deploy (Vercel, dll)
+
+---
+
+## Deploy
+
+Cara termudah adalah via [Vercel](https://vercel.com):
+
+1. Push repository ke GitHub
+2. Connect repository di dashboard Vercel
+3. Tambahkan environment variables di Vercel dashboard
+4. Deploy otomatis setiap push ke branch `master`
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **UI Components:** Radix UI
+- **Language:** TypeScript
