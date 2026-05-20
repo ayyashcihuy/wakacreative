@@ -42,3 +42,6 @@ next-env.d.ts
 
 # private progress & notes
 SEO_PROGRESS.md
+
+# pm2 ecosystem (contains secrets)
+ecosystem.config.js
