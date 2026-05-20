@@ -114,7 +114,7 @@ const jsonLd = {
         "Spesialis video production profesional di Bekasi. Melayani video company profile, video iklan (TVC), dokumentasi, color grading, dan motion graphic.",
       url: BASE_URL,
       telephone: "+62-813-8594-5720",
-      email: "info@wakacreative.com",
+      email: "wakacreative@gmail.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Bekasi",

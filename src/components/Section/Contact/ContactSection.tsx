@@ -7,8 +7,8 @@ const CONTACT_ITEMS = [
   {
     icon: Mail,
     label: "Email",
-    lines: ["info@wakacreative.com", "wakacreative@gmail.com"],
-    href: "mailto:info@wakacreative.com",
+    lines: ["wakacreative@gmail.com"],
+    href: "mailto:wakacreative@gmail.com",
   },
   {
     icon: Instagram,

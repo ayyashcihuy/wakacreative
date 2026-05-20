@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
 import videoProduction from "@/assets/services/video-productions.jpg";
-import photoProduction from "@/assets/services/photo-production.jpg";
 import videoEditing from "@/assets/services/video-editing.jpg";
 
 export interface Service {
@@ -23,19 +22,8 @@ export const SERVICES: Service[] = [
       "Video Iklan",
       "Video Konten",
       "Video Campaigne",
-      "Video Podcast",
-    ],
-  },
-  {
-    id: "photo-production",
-    title: "Photo Production",
-    category: "Production",
-    image: photoProduction,
-    items: [
-      "Foto Company Profile",
-      "Foto Dokumentasi",
-      "Foto Direksi",
-      "Foto Iklan",
+      "Video Dokumenter",
+      "Film Production",
     ],
   },
   {
