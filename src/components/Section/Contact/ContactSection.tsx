@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Instagram, Phone } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const CONTACT_ITEMS = [
   {
@@ -57,13 +58,33 @@ export default function ContactSection() {
         </h2>
       </motion.div>
 
-      {/* Divider */}
+      {/* Separator — title / form */}
       <motion.div
         className="w-full h-px bg-border my-12 sm:my-16"
         initial={{ scaleX: 0, originX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      />
+
+      {/* Contact form */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+        className="mb-12 sm:mb-16"
+      >
+        <ContactForm />
+      </motion.div>
+
+      {/* Separator — form / contact cards */}
+      <motion.div
+        className="w-full h-px bg-border mb-12 sm:mb-16"
+        initial={{ scaleX: 0, originX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
       />
 
       {/* Contact cards */}
