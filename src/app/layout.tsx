@@ -17,14 +17,14 @@ const BASE_URL = "https://wakacreative.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Waka Creative | Jasa Video Production & Foto Profesional di Bekasi",
+    default: "Waka Creative | Jasa Video Production Profesional di Bekasi",
     template: "%s | Waka Creative",
   },
   description:
-    "Waka Creative adalah spesialis video production dan foto profesional di Bekasi. Melayani video company profile, video iklan (TVC), video dokumentasi, foto direksi, color grading, dan motion graphic untuk brand Anda.",
+    "Waka Creative adalah spesialis video production profesional di Bekasi. Melayani video company profile, video iklan (TVC), video dokumentasi, color grading, dan motion graphic untuk brand Anda.",
   keywords: [
     "jasa video production Bekasi",
-    "jasa foto company profile Bekasi",
+    "video company profile Bekasi",
     "video company profile Jakarta",
     "jasa video iklan",
     "video production profesional",
@@ -54,23 +54,23 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: BASE_URL,
     siteName: "Waka Creative",
-    title: "Waka Creative | Jasa Video Production & Foto Profesional di Bekasi",
+    title: "Waka Creative | Jasa Video Production Profesional di Bekasi",
     description:
-      "Spesialis video production dan foto profesional di Bekasi. Video company profile, TVC, dokumentasi, color grading, dan motion graphic.",
+      "Spesialis video production profesional di Bekasi. Video company profile, TVC, dokumentasi, color grading, dan motion graphic.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Waka Creative — Jasa Video Production & Foto di Bekasi",
+        alt: "Waka Creative — Jasa Video Production Profesional di Bekasi",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Waka Creative | Jasa Video Production & Foto Profesional di Bekasi",
+    title: "Waka Creative | Jasa Video Production Profesional di Bekasi",
     description:
-      "Spesialis video production dan foto profesional di Bekasi. Video company profile, TVC, dokumentasi, color grading, dan motion graphic.",
+      "Spesialis video production profesional di Bekasi. Video company profile, TVC, dokumentasi, color grading, dan motion graphic.",
     images: ["/og-image.jpg"],
     creator: "@wakacreative",
   },
@@ -111,7 +111,7 @@ const jsonLd = {
       "@id": `${BASE_URL}/#localbusiness`,
       name: "Waka Creative",
       description:
-        "Spesialis video production dan foto profesional di Bekasi. Melayani video company profile, video iklan (TVC), dokumentasi, color grading, dan motion graphic.",
+        "Spesialis video production profesional di Bekasi. Melayani video company profile, video iklan (TVC), dokumentasi, color grading, dan motion graphic.",
       url: BASE_URL,
       telephone: "+62-813-8594-5720",
       email: "info@wakacreative.com",
